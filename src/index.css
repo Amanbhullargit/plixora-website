@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-obsidian: #050505;
+    --bg-dark-card: #111217;
+    --gold-primary: #f5bd5e;
+    --gold-container: #c59237;
+    --gold-bright: #f7de98;
+    --text-on-surface: #ebe1d6;
+    --text-variant: #d3c4b1;
+  }
+
+  body {
+    background-color: var(--bg-obsidian);
+    color: var(--text-on-surface);
+    font-family: 'Outfit', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-headline {
+    font-family: 'Cinzel', serif;
+  }
+}
+
+/* Custom Typography & Utility Classes */
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-outfit {
+  font-family: 'Outfit', sans-serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Liquid Gold Gradient Effect */
+.liquid-gold-text {
+  background: linear-gradient(135deg, #f7de98 0%, #f5bd5e 35%, #c59237 70%, #f7de98 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: shine 6s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.ambient-glow {
+  box-shadow: 0 0 40px rgba(197, 146, 55, 0.18);
+}
+
+.ambient-glow-strong {
+  box-shadow: 0 0 60px rgba(197, 146, 55, 0.35);
+}
+
+.glass-surface {
+  background: rgba(17, 17, 17, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-card {
+  background: rgba(18, 14, 8, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(245, 189, 94, 0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #3a342c;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c59237;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Plixora Global",
+  "description": "An AI-powered media & creator ecosystem connecting brands, creators and communities through innovative campaigns and integrated media execution.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
