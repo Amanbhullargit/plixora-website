@@ -44,6 +44,7 @@
 .liquid-gold-text {
   background: linear-gradient(135deg, #f7de98 0%, #f5bd5e 35%, #c59237 70%, #f7de98 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 200% auto;
   animation: shine 6s linear infinite;
@@ -53,6 +54,11 @@
   to {
     background-position: 200% center;
   }
+}
+
+/* Reusable 2px Golden Outline for PNG Logos */
+.logo-gold-outline {
+  filter: drop-shadow(2px 0 0 #f5bd5e) drop-shadow(-2px 0 0 #f5bd5e) drop-shadow(0 2px 0 #f5bd5e) drop-shadow(0 -2px 0 #f5bd5e);
 }
 
 .ambient-glow {
@@ -91,3 +97,24 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #c59237;
 }
+
+/* Infinite Marquee Scrolling */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 60s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+

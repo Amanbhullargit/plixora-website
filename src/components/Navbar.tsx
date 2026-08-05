@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Sparkles } from 'lucide-react';
 import { ModalType } from '../types';
+import { PlixoraLogo } from './PlixoraLogo';
 
 interface NavbarProps {
   onOpenModal: (type: ModalType) => void;
@@ -55,30 +56,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenModal, activeSection }) =>
         <a
           href="#home"
           onClick={(e) => handleNavClick(e, '#home')}
-          className="group flex items-center space-x-3 transition-transform duration-300 hover:scale-105"
+          className="group flex items-center transition-transform duration-300 hover:scale-105 py-1"
         >
-          <div className="relative w-10 h-10 flex items-center justify-center">
-            <svg className="w-full h-full filter drop-shadow-[0_0_8px_rgba(245,189,94,0.4)]" viewBox="0 0 100 100" fill="none">
-              <circle cx="50" cy="50" r="44" stroke="url(#gold-grad-nav)" strokeWidth="2" strokeDasharray="8 4" />
-              <ellipse cx="50" cy="50" rx="36" ry="18" transform="rotate(-25 50 50)" stroke="url(#gold-grad-nav)" strokeWidth="2" />
-              <circle cx="50" cy="50" r="10" fill="url(#gold-grad-nav)" />
-              <defs>
-                <linearGradient id="gold-grad-nav" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#f7de98" />
-                  <stop offset="50%" stopColor="#f5bd5e" />
-                  <stop offset="100%" stopColor="#c59237" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-          <div className="flex flex-col">
-            <span className="font-cinzel text-xl lg:text-2xl font-bold tracking-tight text-[#f5bd5e]">
-              Plixora Global
-            </span>
-            <span className="text-[10px] tracking-[0.25em] font-outfit uppercase text-[#d3c4b1]/70 font-semibold -mt-1">
-              Media & Creators
-            </span>
-          </div>
+          <PlixoraLogo size="md" className="h-14 sm:h-18 lg:h-20" />
         </a>
 
         {/* Desktop Navigation Links */}

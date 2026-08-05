@@ -24,7 +24,7 @@ export const FeaturedWork: React.FC<FeaturedWorkProps> = ({ onOpenCaseStudy, onO
 
             <h2 className="font-cinzel text-4xl sm:text-5xl lg:text-6xl font-medium leading-[1.18]">
               Work that<br />
-              creates <span class="liquid-gold-text font-playfair italic font-bold">impact.</span>
+              creates <span className="liquid-gold-text font-playfair italic font-bold">impact.</span>
             </h2>
           </div>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, Mail } from 'lucide-react';
 import { ModalType } from '../types';
+import { PlixoraLogo } from './PlixoraLogo';
 
 interface FooterProps {
   onOpenModal: (type: ModalType) => void;
@@ -24,6 +25,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenModal }) => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-20">
           {/* Left Column: Big Headline */}
           <div className="lg:col-span-7">
+            <div className="mb-6">
+              <PlixoraLogo size="lg" className="h-24 sm:h-28 lg:h-32" />
+            </div>
             <h2 className="font-cinzel text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.15] mb-8">
               Let's build something<br />
               <span className="liquid-gold-text">extraordinary</span> together.
